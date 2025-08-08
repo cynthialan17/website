@@ -8,13 +8,10 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-main">
             <h3>Let's Connect</h3>
-            <p>
-              I'm always open to discussing new opportunities, projects, or just
-              having a chat about design and product.
-            </p>
+            <p>I’m always open to new opportunities and exciting projects!</p>
             <div className="footer-contact">
               <a href="mailto:your.email@cornell.edu" className="contact-link">
-                your.email@cornell.edu
+                cl2683@cornell.edu
               </a>
             </div>
           </div>
@@ -28,17 +25,15 @@ const Footer = () => {
               <a href="#" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Behance
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Instagram
-              </a>
             </div>
 
             <div className="footer-section-links">
               <h4>Quick Links</h4>
-              <a href="#" download>
+              <a
+                href="https://docs.google.com/document/d/1SY48r7z-953V_Urgi55IXVqBuIgeTo7wWq1r7cEarvU/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Resume
               </a>
               <a href="#about">About</a>
@@ -48,7 +43,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Cynthia. Designed and built with care.</p>
+          <p>&copy; 2025 Cynthia Lan.</p>
         </div>
       </div>
     </footer>

@@ -9,15 +9,17 @@ const About = () => {
           <div className="about-text">
             <h2>About Me</h2>
             <p>
-              I'm a passionate student at Cornell University with a love for
-              creating meaningful digital experiences. I blend creativity with
-              strategic thinking to solve problems through design, marketing,
-              and product development.
+              Hi! My name is Cynthia, and I’m from San Jose, California. I’m a
+              junior majoring in Information Science at Cornell University
+              (concentration in UX design) and minoring in Business and
+              Cognitive Science. I’m interested in product management,
+              marketing, and front-end development.
             </p>
             <p>
-              When I'm not designing or coding, you can find me exploring new
-              coffee shops, taking photos around campus, or diving into the
-              latest product launches.
+              In my free time, I love weightlifting, photography, and baking
+              custom cakes! This website displays some of my creative work
+              across recent leadership positions, classes, and other activities.
+              For any inquiries, please contact me below.
             </p>
           </div>
 
@@ -26,25 +28,33 @@ const About = () => {
               <h3>Education</h3>
               <div className="detail-item">
                 <h4>Cornell University</h4>
-                <p>Bachelor of Science • Expected 2025</p>
+                <p>B.S. Information Science • Expected May 2027</p>
                 <p>
-                  Relevant Coursework: Product Management, Marketing Analytics,
-                  UX Design
+                  Relevant Coursework: Web Development & Design, Digital Product
+                  Design, Human Computer Perception, Business Management
                 </p>
               </div>
             </div>
 
             <div className="detail-card">
-              <h3>Experience</h3>
+              <h3>Recent Experience</h3>
               <div className="detail-item">
-                <h4>Product Marketing Intern</h4>
-                <p>Company Name • Summer 2024</p>
-                <p>Led go-to-market strategy for new product features</p>
+                <h4>Product Manager</h4>
+                <p>
+                  Cornell Digital Tech & Innovation •{" "}
+                  <em>Sep 2024 - Present</em>
+                </p>
+                <p>
+                  Leading team through launch process of digital product for
+                  student community
+                </p>
               </div>
               <div className="detail-item">
-                <h4>Design Intern</h4>
-                <p>Company Name • Summer 2023</p>
-                <p>Created marketing materials and social media content</p>
+                <h4>Lab Assistant</h4>
+                <p>
+                  Cornell DECALab • <em>Mar 2025 - Present</em>
+                </p>
+                <p>Designed lab website and developed database tool</p>
               </div>
             </div>
           </div>

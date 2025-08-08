@@ -15,11 +15,16 @@ function App() {
             <h1>Hi, I'm Cynthia</h1>
             <p>Student at Cornell University</p>
             <div className="hero-buttons">
-              <a href="#" download className="btn-primary">
-                Download Resume
+              <a
+                href="https://docs.google.com/document/d/1SY48r7z-953V_Urgi55IXVqBuIgeTo7wWq1r7cEarvU/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                View Resume
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/in/cynthia-lan-0b845a203"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
@@ -29,7 +34,11 @@ function App() {
             </div>
           </div>
           <div className="hero-image">
-            <div className="headshot-placeholder">Your Photo Here</div>
+            <img
+              src="./images/headshot.png"
+              alt="Cynthia's headshot"
+              className="headshot"
+            />
           </div>
         </div>
       </header>

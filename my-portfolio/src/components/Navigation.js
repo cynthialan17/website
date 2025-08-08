@@ -24,7 +24,7 @@ const Navigation = () => {
     <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <button onClick={() => scrollToSection("home")}>Cynthia</button>
+          <button onClick={() => scrollToSection("home")}>Cynthia Lan</button>
         </div>
 
         <div className="nav-links">
