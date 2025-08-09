@@ -19,11 +19,12 @@ const Footer = () => {
           <div className="footer-links">
             <div className="footer-section-links">
               <h4>Connect</h4>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/cynthia-lan-0b845a203/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 LinkedIn
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                GitHub
               </a>
             </div>
 
