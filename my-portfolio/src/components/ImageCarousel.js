@@ -28,6 +28,24 @@ const ImageCarousel = ({ images, category, viewMoreLink }) => {
     );
   }
 
+  // Reset currentIndex if it's out of bounds
+  const safeCurrentIndex = currentIndex >= images.length ? 0 : currentIndex;
+  const currentImage = images[safeCurrentIndex];
+
+  // Safety check - if currentImage is undefined, return early or handle gracefully
+  if (!currentImage) {
+    return (
+      <div className="carousel-empty">
+        <p>Image not found.</p>
+      </div>
+    );
+  }
+
+  const hasTitle = currentImage.title && currentImage.title.trim() !== "";
+  const hasDescription =
+    currentImage.description && currentImage.description.trim() !== "";
+  const shouldShowOverlay = hasTitle || hasDescription;
+
   return (
     <div className="image-carousel">
       <div className="carousel-container">
@@ -38,14 +56,16 @@ const ImageCarousel = ({ images, category, viewMoreLink }) => {
         <div className="carousel-main">
           <div className="carousel-image-container">
             <img
-              src={images[currentIndex].src}
-              alt={images[currentIndex].title}
+              src={currentImage.src}
+              alt={currentImage.title || "Image"}
               className="carousel-image"
             />
-            <div className="image-overlay">
-              <h3>{images[currentIndex].title}</h3>
-              <p>{images[currentIndex].description}</p>
-            </div>
+            {shouldShowOverlay && (
+              <div className="image-overlay">
+                {hasTitle && <h3>{currentImage.title}</h3>}
+                {hasDescription && <p>{currentImage.description}</p>}
+              </div>
+            )}
           </div>
         </div>
 
@@ -58,14 +78,16 @@ const ImageCarousel = ({ images, category, viewMoreLink }) => {
         {images.map((_, index) => (
           <button
             key={index}
-            className={`indicator ${index === currentIndex ? "active" : ""}`}
+            className={`indicator ${
+              index === safeCurrentIndex ? "active" : ""
+            }`}
             onClick={() => goToImage(index)}
           />
         ))}
       </div>
 
       <div className="carousel-counter">
-        {currentIndex + 1} / {images.length}
+        {safeCurrentIndex + 1} / {images.length}
       </div>
 
       {viewMoreLink && (
@@ -76,7 +98,7 @@ const ImageCarousel = ({ images, category, viewMoreLink }) => {
             rel="noopener noreferrer"
             className="view-more-btn"
           >
-            View more {category} →
+            View more →
           </a>
         </div>
       )}

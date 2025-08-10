@@ -8,7 +8,7 @@ const ProjectTabs = () => {
   const tabs = [
     { id: "product-design", label: "Product Design" },
     { id: "marketing", label: "Marketing" },
-    { id: "graphics", label: "Graphics" },
+    { id: "graphics", label: "Graphic Design" },
     { id: "photography", label: "Photography" },
     { id: "other", label: "Other" },
   ];
@@ -25,7 +25,7 @@ const ProjectTabs = () => {
       },
       {
         id: 2,
-        title: "Swapp Website",
+        title: "Swapp Web & Mobile App Design",
         description:
           "Created the web interface for Swapp, a student-driven platform for sustainable item exchange, prioritizing responsive design and intuitive navigation.",
         image: "./images/swapp.png",
@@ -73,57 +73,78 @@ const ProjectTabs = () => {
   const carouselImages = {
     graphics: [
       {
-        src: "/api/placeholder/800/500",
-        title: "Brand Identity Design",
+        src: "./images/graphics/cgo-posts.png",
+        title: "CornellGO Pre-Launch Instagram Posts",
         description:
-          "Complete visual identity for tech startup including logo, color palette, and brand guidelines",
+          "Pre-launch Instagram series introducing the product, team members, and launch details, styled to match the app’s aesthetic with progress bars, location markers, and playful backgrounds.",
       },
       {
-        src: "/api/placeholder/800/500",
-        title: "Social Media Templates",
-        description: "Cohesive template set for Instagram and LinkedIn posts",
+        src: "./images/graphics/curv-tabling.png",
+        title: "CUReviews Tabling Recap",
+        description:
+          "Instagram post designed in Figma summarizing key insights from course reviews collected during our bake sale tabling event.",
       },
       {
-        src: "/api/placeholder/800/500",
-        title: "Marketing Brochure",
-        description: "Multi-page brochure design for product launch campaign",
+        src: "./images/graphics/curv-preenroll.png",
+        title: "CUReviews Pre-enrollment Tips",
+        description:
+          "Instagram post providing important pre-enrollment dates and practical tips for a smooth enrollment process",
       },
       {
-        src: "/api/placeholder/800/500",
-        title: "Event Poster Series",
-        description: "Promotional materials for university event series",
+        src: "./images/graphics/wicc-eboard.png",
+        title: "WICC Eboard Spotlight",
+        description:
+          "A series of Instagram posts spotlighting current WICC e-board members to share experiences and provide insights for prospective applicants.",
+      },
+      {
+        src: "./images/graphics/cpc-speaker.png",
+        title: "Cornell Population Center Speaker Series Flyer",
+        description:
+          "Campus flyer to promote the Fall ‘24 CPC Speaker Series and its featured guests.",
       },
     ],
     photography: [
       {
-        src: "/api/placeholder/800/500",
-        title: "Product Photography",
-        description:
-          "Commercial photography for e-commerce brand showcasing lifestyle products",
+        src: "./images/photography/orange1.jpeg",
       },
       {
-        src: "/api/placeholder/800/500",
-        title: "Campus Architecture",
-        description:
-          "Architectural photography series featuring Cornell University buildings",
+        src: "./images/photography/orange2.jpeg",
       },
       {
-        src: "/api/placeholder/800/500",
-        title: "Portrait Series",
-        description:
-          "Professional headshots and creative portraits for local professionals",
+        src: "./images/photography/orange3.jpeg",
       },
       {
-        src: "/api/placeholder/800/500",
-        title: "Event Photography",
-        description:
-          "Coverage of university events and student organization activities",
+        src: "./images/photography/grad1.jpeg",
       },
       {
-        src: "/api/placeholder/800/500",
-        title: "Street Photography",
-        description:
-          "Candid street photography exploring urban life and culture",
+        src: "./images/photography/grad2.jpeg",
+      },
+      {
+        src: "./images/photography/grad3.jpeg",
+      },
+      {
+        src: "./images/photography/grad4.jpeg",
+      },
+      {
+        src: "./images/photography/pink1.jpeg",
+      },
+      {
+        src: "./images/photography/pink2.jpeg",
+      },
+      {
+        src: "./images/photography/pink3.jpeg",
+      },
+      {
+        src: "./images/photography/sitara.JPG",
+      },
+      {
+        src: "./images/photography/trends1.JPG",
+      },
+      {
+        src: "./images/photography/trends2.JPG",
+      },
+      {
+        src: "./images/photography/wicctech.JPG",
       },
     ],
   };
@@ -131,8 +152,10 @@ const ProjectTabs = () => {
   const renderContent = () => {
     if (activeTab === "graphics" || activeTab === "photography") {
       const viewMoreLinks = {
-        graphics: "https://your-behance-or-dribbble-link.com",
-        photography: "https://your-instagram-or-portfolio-link.com",
+        graphics:
+          "https://drive.google.com/drive/folders/1hQPi_0cw2uauWDgKxAtt2zyRaQlsQJ7v?usp=sharing",
+        photography:
+          "https://drive.google.com/drive/folders/1D7BwUefzTJx9vN3bWPS7p8pqehlXQdKJ?usp=drive_link",
       };
 
       return (
@@ -144,7 +167,6 @@ const ProjectTabs = () => {
       );
     }
 
-    // Use cards for other sections
     return (
       <div className="projects-grid">
         {projects[activeTab]?.map((project) => (
